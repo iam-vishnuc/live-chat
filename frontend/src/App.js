@@ -6,7 +6,7 @@ import "./App.css";
 
 // Create a single socket instance for the whole app
 // For local testing, use: http://localhost:5000
-const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || "http://localhost:5000";
+const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || "https://live-chat-backend-29tg.onrender.com";
 const socket = io(SOCKET_URL, {
   autoConnect: true,
   reconnection: true,
