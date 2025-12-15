@@ -1,0 +1,396 @@
+/* General container */
+.container {
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Navbar title - left side */
+.navbar-title {
+  color: #333;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Navbar controls - right side */
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Media controls */
+.media-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Media button */
+.media-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  color: white;
+}
+
+.media-btn.enabled {
+  background-color: #007bff;
+}
+
+.media-btn.enabled:hover {
+  background-color: #0056b3;
+}
+
+.media-btn.disabled {
+  background-color: #dc3545;
+}
+
+.media-btn.disabled:hover {
+  background-color: #c82333;
+}
+
+.media-btn span {
+  font-size: 13px;
+}
+
+/* Chat layout - split screen */
+.chat-layout {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+/* Video section - left half */
+.video-section {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chat section - right half (more width) */
+.chat-section {
+  flex: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Status container */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* Status message */
+.status {
+  font-size: 16px;
+  margin: 0;
+  color: #555;
+  text-align: right;
+}
+
+/* Connection info */
+.connection-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+.connection-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.connection-dot.connected {
+  background-color: #28a745;
+  box-shadow: 0 0 4px #28a745;
+}
+
+.connection-dot.disconnected {
+  background-color: #dc3545;
+  box-shadow: 0 0 4px #dc3545;
+}
+
+.socket-info {
+  font-weight: 500;
+}
+
+.partner-info {
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Start button container */
+.start-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+}
+
+/* Start chat button */
+.start-btn {
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: white;
+  margin: 0;
+}
+
+.start-btn:hover {
+  background-color: #218838;
+}
+
+/* Skip button */
+.skip-btn {
+  padding: 10px 16px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.3s;
+}
+
+.skip-btn:hover {
+  background-color: #e67600;
+}
+
+/* Video container */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+/* Video grid container */
+.video-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video square - fixed equal width and height */
+.video-square {
+  position: relative;
+  background-color: #1a1a1a;
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Video elements */
+.video {
+  width: 45%;
+  max-width: 400px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: black;
+}
+
+/* Chat container */
+.chat-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* Messages area */
+.messages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Individual message styles */
+.messages p {
+  margin: 5px 0;
+  padding: 5px 8px;
+  border-radius: 5px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* User messages */
+.me {
+  background-color: #d0ebff;
+  color: #004085;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Stranger messages */
+.stranger {
+  background-color: #f8d7da;
+  color: #721c24;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Input box */
+.input-box {
+  display: flex;
+  gap: 10px;
+}
+
+/* Input field */
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Send button */
+.input-box button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.input-box button:hover {
+  background-color: #0069d9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .navbar-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .media-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .media-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .status {
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .chat-layout {
+    flex-direction: column;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .video-section,
+  .chat-section {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .chat-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Make video squares smaller on mobile */
+  .video-square {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+  }
+}
